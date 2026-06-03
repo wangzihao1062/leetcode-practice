@@ -6,7 +6,7 @@ import java.util.HashMap;
 你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。
 你可以按任意顺序返回答案。*/
 
-public class twoSum1 {
+public class TwoSum1 {
     public int[] twoSum(int[] nums,  int target){
         HashMap<Integer,Integer> hm = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -14,7 +14,7 @@ public class twoSum1 {
             if(hm.containsKey(complement)){
                 return new int[]{i, hm.get(complement)};
             }
-            hm.put(complement, nums[i]);
+            hm.put(nums[i], i);
         }
         return new int[0];
     }
